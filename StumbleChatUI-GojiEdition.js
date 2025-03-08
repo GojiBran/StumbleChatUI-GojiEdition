@@ -17,9 +17,9 @@
     // Theme colors for easy reference and future modifications
     const themeColors = {
         background: "#404040",          // Main background
-        backgroundSecondary: "#505050", // Secondary background (panels, overlays)
-        backgroundTertiary: "#606060",  // Tertiary background for elements
-        backgroundQuaternary: "#505050", // Quaternary background (e.g., media players)
+        backgroundSecondary: "#404040", // Secondary background (panels, overlays)
+        backgroundTertiary: "#303030",  // Tertiary background for elements
+        backgroundQuaternary: "#303030", // Quaternary background (e.g., media players)
         highlight: "#99cc33",           // Primary highlight color (text, borders, UI accents)
         accentPrimary: "#6633cc",       // First accent color
         accentSecondary: "#3399cc",     // Second accent color
@@ -40,7 +40,7 @@
 
             /* Media players */
             #embeddedvideos { background: #202020 !important; }
-            #regularvideos { background: #303030 !important; }
+            #regularvideos { background: #404040 !important; }
 
             /* Ensure video elements have a dark background */
             div video { background: #202020 !important; }
@@ -61,8 +61,8 @@
             #chat-content { background: #202020 !important; }
 
             /* User menu */
-            .user-menu { background: #303030 !important; }
-            .user-menu-item { background: #404040 !important; color: ${themeColors.textPrimary} !important; }
+            .user-menu { background: #202020 !important; }
+            .user-menu-item { background: #303030 !important; color: ${themeColors.textPrimary} !important; }
             .user-menu-link { color: ${themeColors.highlight} !important; }
             .user-menu-link:hover { background: ${themeColors.accentPrimary} !important; color: ${themeColors.buttonText} !important; }
 
