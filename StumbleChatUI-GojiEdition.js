@@ -40,8 +40,8 @@
 
             /* Media players */
             #embeddedvideos { background: #202020 !important; }
-            #regularvideos { background: #404040 !important; }
-
+            #regularvideos { background: #303030 !important; }
+            
             /* Ensure video elements have a dark background */
             div video { background: #202020 !important; }
 
@@ -55,7 +55,7 @@
 
             /* User list */
             #userlist { background: #202020 !important; }
-            #userlist .list .user { color: ${themeColors.highlight} !important; }
+            #userlist .list .user { background: #303030 !important; color: ${themeColors.highlight} !important; }
 
             /* Chat background */
             #chat-content { background: #202020 !important; }
