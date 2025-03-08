@@ -1,2 +1,3 @@
 # StumbleChatUI-GojiEdition
- UserScript to change StumbleChat Theme
+ **UserScript to change StumbleChat Theme**
+ *Very early work in progress*
