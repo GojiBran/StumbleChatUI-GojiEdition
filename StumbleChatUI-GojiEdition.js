@@ -30,16 +30,20 @@
 
     // Applies CSS styles to the page
     function applyStyles() {
-        console.log("[StumbleChat UI Overhaul] Applying styles...");
+        console.log("[StumbleChat UI - Goji Edition] Applying styles...");
         GM_addStyle(`
             /* Global dark theme */
-            body { background: ${themeColors.background} !important; color: ${themeColors.textPrimary} !important; }
+            body { background: #202020 !important; color: ${themeColors.textPrimary} !important; }
 
             /* User video frames */
             #videos .video-wrapper { border: 4px solid ${themeColors.highlight} !important; background: ${themeColors.backgroundTertiary} !important; }
 
             /* Media players */
-            #embeddedvideos, #regularvideos { background: ${themeColors.backgroundQuaternary} !important; }
+            #embeddedvideos { background: #303030 !important; }
+            #regularvideos { background: #404040 !important; }
+
+            /* Ensure video elements have a dark background */
+            div video { background: #202020 !important; }
 
             /* Taskbar styling */
             .bar { background: ${themeColors.backgroundSecondary} !important; transition: background 0.2s ease-in-out !important; }
@@ -74,7 +78,7 @@
 
     // Applies direct UI modifications to elements after they load
     function customizeUI() {
-        console.log("[StumbleChat UI Overhaul] Customizing UI...");
+        console.log("[StumbleChat UI - Goji Edition] Customizing UI...");
         document.querySelectorAll('button, .dropbtn').forEach(button => {
             button.style.background = themeColors.accentPrimary;
         });
@@ -82,9 +86,9 @@
 
     // Observes changes to the DOM and reapplies styles dynamically
     function observeChanges() {
-        console.log("[StumbleChat UI Overhaul] Starting MutationObserver...");
+        console.log("[StumbleChat UI - Goji Edition] Starting MutationObserver...");
         const observer = new MutationObserver(() => {
-            console.log("[StumbleChat UI Overhaul] DOM changes detected, reapplying styles.");
+            console.log("[StumbleChat UI - Goji Edition] DOM changes detected, reapplying styles.");
             customizeUI();
         });
         observer.observe(document.body, { childList: true, subtree: true });
@@ -92,7 +96,7 @@
 
     // Initializes the script by applying styles and setting up observers
     function initScript() {
-        console.log("[StumbleChat UI Overhaul] Initializing script...");
+        console.log("[StumbleChat UI - Goji Edition] Initializing script...");
         applyStyles();
         observeChanges();
         setTimeout(customizeUI, 2000); // Ensures late-loaded elements are styled
